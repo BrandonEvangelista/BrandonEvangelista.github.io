@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- 
+          This is the head section. 
+          It includes optional information about the web page (author, date, etc)
+          It must include the charater set and the title
+        -->
+          <meta charset="UTF-8">
+          <title>Programming Language: Assembly </title>
+          <link rel="stylesheet" href="css/styles.css">
+          <!-- Fonts!!!! -->
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+
+          <!-- fonts^^^^^ -->
+    </head>
+    <hr>
+    <body>
+        <style>
+            /* body {
+               background-color: orange; !important;
+            }
+            */
+        </style>
+
+        <header>
+            <h1>Brandon Evangelista`</h1>
+        </header>
+        <hr>
+        <nav>
+            <a href="hw1page1.html">Programming Languages: Assembly</a>
+            <a href="hw1page2.html">Java</a>
+            <a href="hw1page3.html">Python</a>
+            <a href="hw1page4.html" style="color: blue; text-decoration: none;">Assembly</a>
+        </nav>
+        
+        <br><br>
+    
+        <main>
+            <figure>
+                <img src="img/assLang.webp" alt="a picture of Brandon Evangelista">
+            </figure>
+
+            <div class="card">
+                <h1>Assembly language, Low-level programming</h1>
+                
+
+                <h2>Why is Assembly so hard to read? </h2>
+                <ul>
+                    <li>Assembly language is a low-level programming language that uses short words and symbols instead of binary.</li>
+                    <li>It is very close to computer hardware and requires understanding about how a CPU works</li>
+                    <li>Memory must be managed by the programmer</li>
+                </ul>
+                <h2>Common Uses</h2>
+                <ul>
+                    <li><strong>Embedded Systems:</strong> Runs tiny computers inside everyday devices (yes, even your microwave).</li>
+                    <li><strong>Operating Systems & Drivers:</strong> Helps your computer "talk" directly to hardware.</li>
+                    <li><strong>Gaming & Graphics:</strong> Used to squeeze out extra speed for visuals, sound, and game physics.</li>
+                    <li><strong>High Frequency Trading :</strong>  leverage their speed advantage over high level languages for time-sensitive trades.</li>
+                  </ul>
+                  </ul>
+
+                <br><br>
+                <h3>Assembly Example</h3>
+                <pre><code>section .data
+                    msg db "Hello, world!", 0
+                
+                section .text
+                    global _start
+                
+                _start:
+                    ; print message (very simplified)
+                    mov eax, 4
+                    mov ebx, 1
+                    mov ecx, msg
+                    mov edx, 13
+                    int 0x80
+                </code></pre>
+
+               
+                Sources:  <a href="https://www.investopedia.com/terms/a/assembly-language.asp#toc-high-frequency-trading"> What Are Assembly Languages?</a> & <a href="https://www.geeksforgeeks.org/computer-science-fundamentals/difference-between-high-level-and-low-level-languages/"> Geeksforgeeks: Difference between High Level and Low level languages</a>
+            </div>
+        </main>
+        
+        
+        <footer>
+             <!-- Your last name and year here in ALL assignments -->
+                <hr>
+            
+                CST336 Internet Programming. 2025&copy; Evangelista <br />
+                <strong>Disclaimer:</strong>this website is used for academic purposes only. <br /> 
+                <div>
+                    <figure>
+                        <img src="img/logo.png" alt="an image CSUMB logo">
+                    </figure>
+                </div>
+        </footer>
+        
+    </body>
+
+</html>
