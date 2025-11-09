@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+    <link rel="stylesheet" href="css/gamestyles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <h1>Guess the Number</h1>
+    <p>Riddle me this! I am thinking of a number between 1 and 100 (not including 100)</p>
+    <h3>Guess the correct answer in 7 attempt</h3>
+    <div id="play_area">
+        <label for="player_guess">Enter your guess!</label>
+        <input type="text" name="playerGuess" id="playerGuess" minlength="1" maxlength="2">
+        <input type="button" id="submit_button" value="SUBMIT">
+        <div id="triesleft" > </div>
+        <div id="feedback" > </div>
+    </div>
+    <div id="score_board">
+        <h4>What you have guessed so far........</h4>
+        <div id="guessed_numbers">Previous Guesses: 
+        <br>
+        
+            <span id="guesses"></span>
+        </div>
+        <input type="button" value="RESET GAME" id="resetBtn">
+        <br>
+        <div id="win_lose"></div>
+    </div>
+   
+    <script src="JS/script.js"></script>
+</body>
+</html>
