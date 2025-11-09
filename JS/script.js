@@ -41,7 +41,7 @@ function initializeGame() {
 
 
     if(guess == randomNumber){
-        feedback.textContent = "YOU WON: Congratulations! You've guessed the correct number!";
+        feedback.textContent = "YOU WON! Congratulations! You've guessed the correct number!";
         feedback.style.color = "green";
         PLAYER_WIN_COUNT++;
         gameOver();
@@ -49,7 +49,7 @@ function initializeGame() {
     }   else{
            
             if(attempts == 7){
-                feedback.textContent = `YOU LOST: Sorry, you've used all your attempts. CORRECT NUMBER WAS ${randomNumber}.`;
+                feedback.textContent = `YOU LOST! Sorry, you've used all your attempts. CORRECT NUMBER WAS ${randomNumber}.`;
                 PLAYER_LOSS_COUNT++;
                 gameOver();
                 return;
