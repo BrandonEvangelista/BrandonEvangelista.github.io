@@ -60,6 +60,8 @@ function gradeQuiz(){
     console.log("Grading Quiz...");
     document.querySelector("#validationFdbk").innerHTML = "";//resets validation feedback
     document.querySelector("#validationFdbk6").innerHTML = "";//resets validation feedback
+    document.querySelector("#validationFdbk9").innerHTML = "";//resets validation feedback
+    document.querySelector("#validationFdbk10").innerHTML = "";//resets validation feedback
     if(!isFormValid()){
         return; //stops grading if form is not valid
     }
