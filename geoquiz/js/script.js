@@ -32,6 +32,14 @@ function isFormValid(){
         isValid = false;
         document.querySelector("#validationFdbk6").innerHTML = "Question 6 was not answered";
     }
+    if(document.querySelector("#q9").value == ""){
+        isValid = false;
+        document.querySelector("#validationFdbk9").innerHTML = "Question 9 was not answered";
+    }
+    if(document.querySelector("#q10").value == ""){
+        isValid = false;
+        document.querySelector("#validationFdbk10").innerHTML = "Question 10 was not answered";
+    }
     return isValid;
 } //isFormValid
 
@@ -65,12 +73,16 @@ function gradeQuiz(){
     let q4Response = document.querySelector("input[name=q4]:checked").value;
     let q5Response = document.querySelector("#q5").value;
     let q6Response = document.querySelector("#q6").value;
-    
+    let q8Response = document.querySelector("#q8").value;
+    let q9Response = document.querySelector("#q9").value.toLowerCase();
+    console.log(q9Response);
+    let q10Response = document.querySelector("#q10").value.toLowerCase();
+    console.log(q10Response);
 
     //grading question 1
     if (q1Response == "sacramento"){
         rightAnswer(1);
-        score+=20
+        score+=10
     }else{
        wrongAnswer(1);
     }
@@ -79,7 +91,7 @@ function gradeQuiz(){
     //grading question 2
     if (q2Response == "mo"){
         rightAnswer(2);
-        score+=20
+        score+=10
     }else{
         wrongAnswer(2);
     }
@@ -87,7 +99,7 @@ function gradeQuiz(){
      //grading question 3
      if (document.querySelector("#Jefferson").checked && !document.querySelector("#Jackson").checked && !document.querySelector("#Franklin").checked && document.querySelector("#Roosevelt").checked){
         rightAnswer(3);
-        score+=20
+        score+=10
     }else{
         wrongAnswer(3);
     }
@@ -95,7 +107,7 @@ function gradeQuiz(){
         //grading question 4
     if (q4Response == "Rhode Island"){
         rightAnswer(4);
-        score+=20
+        score+=10
     }
     else{
         wrongAnswer(4);
@@ -104,7 +116,7 @@ function gradeQuiz(){
    
     if (q5Response == "au"){
         rightAnswer(5);
-        score+=20;
+        score+=10;
     }else{
         wrongAnswer(5);
     }
@@ -112,7 +124,7 @@ function gradeQuiz(){
     //grading question 6
     if (q6Response == "50"){
         rightAnswer(6);
-        score+=20;
+        score+=10;
     }else{
         wrongAnswer(6);
     }
@@ -124,10 +136,33 @@ document.querySelector("#Erie").checked &&
 !document.querySelector("#Tahoe").checked ) {
 
 rightAnswer(7);
-score += 20;
+score += 10;
 
 } else {
 wrongAnswer(7);
+}
+    // Question 8: florida image
+if (q8Response == "fl"){
+    rightAnswer(8);
+    score+=10;
+}else{
+    wrongAnswer(8);
+}
+
+ //grading question 9
+ if (q9Response == "golden gate bridge"){
+    rightAnswer(9);
+    score+=10
+}else{
+   wrongAnswer(9);
+}
+
+ //grading question 10
+ if (q10Response == "oklahoma"){
+    rightAnswer(10);
+    score+=10
+}else{
+wrongAnswer(10);
 }
 
 
@@ -142,4 +177,17 @@ wrongAnswer(7);
     document.querySelector("#totalAttempts").innerHTML = `Total Attempts: ${++attempts}`;
 
     localStorage.setItem("total_attempts", attempts);
+
+    if (score > 80) {
+        document.querySelector("#winner").innerHTML =
+          "Based on my requirements, this is a congratulatory message because you scored above 80!";
+        
+          document.querySelector("#winnerImg").innerHTML =
+  "<img src='img/win.png' class='img-fluid mx-auto d-block rounded shadow' style='max-width: 40%;' alt='Trophy icon'>";
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+    }
 }
