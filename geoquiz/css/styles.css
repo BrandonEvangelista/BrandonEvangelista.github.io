@@ -1,0 +1,5 @@
+body {
+    background-image: url("../img/test.webp");
+  background-size: cover;       /* Make it fill the screen */
+  background-position: center center; 
+}
