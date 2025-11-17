@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Welcome!</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .card {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            max-width: 400px;
+        }
+        h1 {
+            color: #333;
+        }
+        .label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Thank you for submitting your sensitive information 😈
+   </h1>
+   <span>
+    *Relax — this is a joke. Nothing was stored. The form used the GET method, so all your “sensitive info” just rode along in the URL.*
+</span>
+   <H2> <img src="img/HACK.gif" alt="hack gif" style="width: 80px%; height:auto"></H2>
+   <H2> <img src="img/Rick Astley GIF.gif" alt="rick dance" style="width:80%; "></H2>
+
+    <div class="card">
+        <p><span class="label">First Name:</span> <span id="fName"></span></p>
+        <p><span class="label">Last Name:</span> <span id="lName"></span></p>
+        <p><span class="label">Gender:</span> <span id="gender"></span></p>
+        <p><span class="label">Zip:</span> <span id="zip"></span></p>
+       
+       
+    </div>
+
+    <script>
+        // Get URL params
+        const params = new URLSearchParams(window.location.search);
+
+        // Fill in the content
+        document.getElementById("fName").textContent = params.get("fName");
+        document.getElementById("lName").textContent = params.get("lName");
+        document.getElementById("gender").textContent = params.get("gender");
+        document.getElementById("zip").textContent = params.get("zip");
+        document.getElementById("city").textContent = params.get("c ity");
+        document.getElementById("state").textContent = params.get("state");
+        document.getElementById("county").textContent = params.get("county");
+        document.getElementById("username").textContent = params.get("username");
+    </script>
+
+</body>
+</html>
