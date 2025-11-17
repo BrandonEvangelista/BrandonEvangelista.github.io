@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+   <title> Sign Up Page </title>
+   <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <div class="form-wrapper">
+        <h1 class="scam-title"><del>Scam Likely</del></h1>
+    <h1> Sign Up </h1>
+    <form id="signupForm" action="welcome.html">
+    <div class="block">
+     First Name:<input type="text" name="fName"><br>
+     Last Name: <input type="text" name="lName"><br>
+    </div>
+    <div class="block">
+     Gender:    
+         <input type="radio" name="gender" value="m">Male<br>
+         <input type="radio" name="gender" value="f">Female<br>	
+    </div>
+    <div class="block">
+      Zip Code:  <input type="text" id="zip" name="zip"><br>
+      <span id="zipError"></span>
+      City:   <span id="city"></span> <br>
+      Latitude: <span id="lat"></span>  <br>
+      Longitude: <span id="long"></span> <br><br>
+    </div>
+    <div class="block">
+      State: 
+      <select id="state" name="state">
+            <option>Select One</option>
+            <option value="ca">California</option>
+            <option value="ny">New York</option>
+	        <option value="tx">Texas</option>
+       </select> <br>
+
+
+       Select a County: <select id="county"></select><br>
+           
+            </select> <br>
+        </div>
+
+
+
+        <div class="block">
+       Desired Username: <input type="text" id="username" name="username" ><br>
+       <span id="usernameError"></span>
+       <br>
+
+       Password: <input type="password" id="password" name="password"> <br>
+<span id=”suggestedPwd”>enter a password greater than 5 characters......or else!</span> <br>
+        Type Password Again: <input type="password" id="retypePass" name="retypePass"><br>
+   
+<span id=retypeError></span> 
+</div>
+<div class="block">
+         <input id="submit" type="submit" value="Sign up!">
+        </div>
+        </form>
+
+
+         <script src="js/script.js"></script>
+        </div>
+</body>
+</html>
