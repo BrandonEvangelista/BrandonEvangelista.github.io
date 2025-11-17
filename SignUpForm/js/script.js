@@ -12,28 +12,46 @@ document.querySelector("#signupForm").addEventListener("submit",function(event){
 //functions
 
 
-function validateForm(e){
+function validateForm(e) {
     let isValid = true;
-    let username = document.querySelector("#username").value;
-    let usernameError = document.querySelector("#usernameError");
-    let wrapper = document.querySelector(".form-wrapper");
 
+    const username = document.querySelector("#username").value;
+    const password = document.querySelector("#password").value;
+    const retypePass = document.querySelector("#retypePass").value;
+
+    const usernameError = document.querySelector("#usernameError");
+    const retypeError = document.querySelector("#retypeError");
+    const wrapper = document.querySelector(".form-wrapper");
+
+    // reset error messages
+    // (so old errors don't hang around)
+    // optional but nice
+    // usernameError.innerHTML = "";
+    // retypeError.innerHTML = "";
+
+    // ✅ Username required
     if (username.length === 0) {
         usernameError.innerHTML = "Username is required";
         usernameError.style.color = "red";
         isValid = false;
+    }
+
+    // ✅ Passwords must match
+    if (password !== retypePass) {
+        retypeError.innerHTML = "Passwords do not match!";
+        retypeError.style.color = "red";
+        isValid = false;
+    }
+
+    // If anything failed, block submit + shake
+    if (!isValid) {
+        e.preventDefault();
 
         // SHAKE THE WHOLE FORM
         wrapper.classList.add("shake");
-
-        // Remove shake so it can shake again later
         setTimeout(() => {
             wrapper.classList.remove("shake");
         }, 450);
-    }
-
-    if (!isValid) {
-        e.preventDefault();
     }
 }
 
