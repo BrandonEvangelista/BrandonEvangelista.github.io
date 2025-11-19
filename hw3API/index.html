@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Anime Typing Trainer</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+</head>
+
+<body>
+  <div class="app">
+    <header>
+      <h1>Anime Typing Trainer</h1>
+      <p class="subtitle">
+        Fetch anime quotes based on your input, type them, and track your personal best — all stored locally.
+      </p>
+    </header>
+
+    <main>
+      <!-- Controls -->
+      <section class="controls">
+        <div class="control-group">
+          <label for="promptType">Quote type:</label>
+          <select id="promptType">
+            <option value="random">Random</option>
+            <option value="anime">By Anime</option>
+            <option value="character">By Character</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="userInput">Filter:</label>
+          <input
+            id="userInput"
+            type="text"
+            placeholder="Enter anime or character…"
+            style="display:none;"
+          >
+        </div>
+
+        <button id="fetchPromptBtn">Get Prompt</button>
+      </section>
+
+      <!-- Status / error -->
+      <div id="status" class="status"></div>
+
+      <!-- Prompt display -->
+      <section class="prompt-section">
+        <h2>Prompt</h2>
+
+        <p id="promptBox" class="prompt-box">
+          Choose a quote type and click <strong>Get Prompt</strong> to start.
+        </p>
+
+        <div class="quote-meta">
+          <p><strong>Anime:</strong> <span id="animeName">—</span></p>
+          <p><strong>Character:</strong> <span id="characterName">—</span></p>
+        </div>
+      </section>
+
+      <!-- Typing area -->
+      <section class="typing-section">
+        <h2>Your typing</h2>
+        <textarea
+          id="typingArea"
+          placeholder="After the prompt appears above, type it here as fast and accurately as you can."
+          disabled
+        ></textarea>
+
+        <button id="finishBtn" disabled>Finish Test</button>
+      </section>
+
+      <!-- Results -->
+      <section class="results-section">
+        <h2>Results</h2>
+        <p>Last test: <span id="lastStats">–</span></p>
+        <p>Personal best (local): <span id="bestStats">–</span></p>
+      </section>
+    </main>
+  </div>
+  <footer>
+    <!-- Your last name and year here in ALL assignments -->
+       <hr>
+   
+       CST336 Internet Programming. 2025&copy; Evangelista <br />
+       <strong>Disclaimer:</strong>this website is used for academic purposes only. <br /> 
+       <div>
+           <figure>
+               <img src="img/logo.png" alt="an image CSUMB logo">
+           </figure>
+       </div>
+</footer>
+</body>
+</html>
