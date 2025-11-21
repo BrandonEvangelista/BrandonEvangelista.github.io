@@ -1,0 +1,26 @@
+For the midterm exam, you'll implement a Famous Quotes web app.
+A random quote an corresponding author should be displayed after loading the page.
+Users are able to translate the quote by selecting one of the available languages.
+Users can also choose to display up to five quotes. Your exam should include the elements below, click on any of the elements and "Info" icons to review their expected functionality.
+
+
+
+1. Retrieve and display a random quote and its corresponding author using the following Web API. A random quote should be displayed everytime the page reloads.
+
+https://csumb.space/api/famousQuotes/getRandomQuote.php
+
+2. When clicking on the "Display Author Info", display the author's bio and picture using the data retrieved from the Web API. Use a two-column layout.
+
+3. Display the languages radio buttons. They must be in random order every time the page loads
+
+4. When clicking on the "Translate" button, display the corresponding flag image (download images here) and use the following Web API to get the translation. You must pass the quoteId and the two-letter abbreviation of the language (EN-English, ES-Esperanto, FR-French, SP-Spanish)
+
+https://csumb.space/api/famousQuotes/translateQuote.php?lang=ES&quoteId=2
+
+5. When clicking on the "Get Quotes" button, validate the text box (must have a value between 1 and 5). Use Web API below to get the specified number of quotes and display them with their author.
+
+https://csumb.space/api/famousQuotes/getQuotes.php?n=3
+
+6. Display a random background image every time the page is refreshed. Use the following Web API (consider using your own Web API key to avoid exceeding the rate limit).
+
+https://pixabay.com/api/?key=5589438-47a0bca778bf23fc2e8c5bf3e&per_page=50&orientation=horizontal&q=flowers

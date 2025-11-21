@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- 
+          This is the head section. 
+          It includes optional information about the web page (author, date, etc)
+          It must include the charater set and the title
+        -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.2/underscore-umd-min.js"> </script> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        
+          <title>Practice EXAM</title>
+          <link rel="stylesheet" href="css/styles.css">
+
+          
+
+
+          <!-- fonts^^^^^ -->
+    </head>
+    <hr>
+    <body>
+
+        <!-- QUOTE AREA-->
+        <div>
+        <h1 id="famousQuote" >FAMOUS QUOTE HERE!!!!</h1>
+       <h2 id="famousAuthor">--NAME OF AUTHOR</h2>
+       <h1 class="p-5 bg-info">US Geography Quiz</h1>
+        </div>
+         <!-- ^^^^^QUOTE AREA^^^^^-->
+
+         
+        <!-- LANGUAGE AREA--> 
+       <div>
+        <img  id="flag" src="" alt="FLAGx">
+        <br>
+        
+        <div id="langChoices"></div>
+        <br><br>
+    
+
+       </div>
+        <!-- ^^^^LANGUAGE AREA^^^^-->
+
+
+       <h3><span id="markImg1"></span>What is the capital of California?</h3>
+       <input type="text" id="q1">
+       <h3 id="validationFdbk" class="bg-danger text-white"></h3>
+         <br><br>
+         <div id="q1Feedback"></div>
+
+        <h3><span id="markImg2"></span>Which river is the longest in the United States?</h3>
+        <select  id="q2">
+            <option value="">select one</option>
+            <option value="ms">Mississippi River</option>
+            <option value="mo">Missouri River</option>
+            <option value="co">Colorado River</option>
+            <option value="de">Delaware river</option>
+        </select>
+        <br><br>
+        <div id="q2Feedback"></div>
+
+        <h3 id="validationFdbk" class="bg-danger text-white"></h3>
+         <br><br>
+
+        
+         <br><br>
+
+
+         
+    <br>
+       <input type="text" id="q10">
+       <h3 id="validationFdbk10" class="bg-danger text-white"></h3>
+         <br><br>
+         <div id="q10Feedback"></div>
+
+                    
+
+
+
+        
+       
+        <button type="button" class="btn btn-warning">SUBMIT QUIZ</button>
+        <h2 id="totalScore" class="text-info"></h2>
+
+        <h3 id="totalAttempts"></h3>
+        
+        <br>
+ 
+        
+        
+        <footer>
+             <!-- Your last name and year here in ALL assignments -->
+                <hr>
+            
+                CST336 Internet Programming. 2025&copy; Evangelista, Brandon <br />
+                <strong>Disclaimer:</strong>this website is used for academic purposes only. <br /> 
+                <div>
+                    <figure>
+                        <img src="img/logo.png" alt="an image CSUMB logo">
+                    </figure>
+                </div>
+        </footer>
+        <script src="js/script.js"></script>
+    </body>
+
+</html>
