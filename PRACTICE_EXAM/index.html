@@ -27,23 +27,39 @@
         <div>
         <h1 id="famousQuote" >FAMOUS QUOTE HERE!!!!</h1>
        <h2 id="famousAuthor">--NAME OF AUTHOR</h2>
-       <h1 class="p-5 bg-info">US Geography Quiz</h1>
+       
         </div>
          <!-- ^^^^^QUOTE AREA^^^^^-->
 
          
         <!-- LANGUAGE AREA--> 
        <div>
-        <img  id="flag" src="" alt="FLAGx">
+         <span id="flag"></span>
         <br>
         
-        <div id="langChoices"></div>
+        <div id="langChoices"> <!-- leave empty call function to fill random--> </div>
         <br><br>
-    
+        <input type="button" id="translate" value="Translate!">
 
        </div>
+       <br>
         <!-- ^^^^LANGUAGE AREA^^^^-->
 
+        <input type="button" id="moreAuthor" value="Learn More About Author">
+        <!-- AUTHOR AREA some of HIDE ME--> 
+        <div style="all:unset;">
+            <div id="hideMe" style="display:flex; gap:20px;">
+                <div style="flex:1;">
+                    <p id="authorBio">authorBioauthorBio</p>
+                </div>
+                <div style="flex:1;">
+                    <p id="authorPic">authorPicauthorPic</p>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- AUTHOR AREA HIDE ME--> 
 
        <h3><span id="markImg1"></span>What is the capital of California?</h3>
        <input type="text" id="q1">

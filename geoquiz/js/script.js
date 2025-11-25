@@ -18,6 +18,23 @@ function displayq4Choices(){
         `<input type="radio" name="q4" id="${q4ChoicesArray[i]}" value="${q4ChoicesArray[i]}">
          <label for="${q4ChoicesArray[i]}">${q4ChoicesArray[i]}</label><br>`;
     }
+
+    function displayFlag(language){
+    if (language == "Esperanto"){
+        document.querySelector("#flag").innerHTML = '<img src="img/esparanto_flag.png" alt="FLAGx">'
+    }
+    else  if (language == "English"){
+        document.querySelector("#flag").innerHTML = '<img src="img/englishflag.png" alt="FLAGx">'
+    }
+    else if (language == "Spanish"){
+        document.querySelector("#flag").innerHTML = '<img src="img/spanish_flag.png" alt="FLAGx">'
+    }
+    else if (language == "French"){
+        document.querySelector("#flag").innerHTML = '<img src="img/french_flag.png" alt="FLAGx">'
+    }
+    console.log(language);
+    
+}
 }
 
 
